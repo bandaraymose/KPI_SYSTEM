@@ -2,6 +2,8 @@
 **/bin/
 **/obj/
 frontend/build/
+frontend/public/*.pdf
+frontend/public/*.xlsx
 backend/KpiApi/appsettings.json
 backend/KpiApi/appsettings.Development.json
 .env
