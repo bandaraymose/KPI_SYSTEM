@@ -1,0 +1,47 @@
+.completed-evals-container {
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.loading {
+  color: #11486B;
+  font-weight: bold;
+  padding: 20px;
+}
+.error-message {
+  color: #c00;
+  background: #ffeaea;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.evaluations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.evaluations-table th, .evaluations-table td {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: left;
+}
+.evaluations-table th {
+  background: #f8f9fa;
+  color: #11486B;
+}
+.evaluations-table tr:nth-child(even) {
+  background: #f8f9fa;
+}
+.download-btn {
+  background: #11486B;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+.download-btn:hover {
+  background: #0d3550;
+}

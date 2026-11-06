@@ -1,0 +1,266 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #11486B 0%, #1a5a7a 100%);
+  padding: 20px;
+}
+
+.login-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1000px;
+  width: 100%;
+  padding: 10px;
+}
+
+.university-logo {
+  color: white;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.logo-placeholder {
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  backdrop-filter: blur(10px);
+}
+
+.logo-placeholder h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.logo-placeholder p {
+  font-size: 16px;
+  margin: 5px 0 0 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.login-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  flex: 1;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-header h1 {
+  color: #11486B;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.login-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input .form-input {
+  padding-right: 88px; /* room for toggle button */
+}
+
+.toggle-visibility {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f0f2f5;
+  border: 1px solid #e0e0e0;
+  color: #11486B;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.toggle-visibility:hover {
+  background: #e7ebf0;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #11486B;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(17, 72, 107, 0.1);
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #11486B, #1a5a7a);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0d3a56, #155168);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(17, 72, 107, 0.3);
+}
+
+.login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-left: 4px solid #c33;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.demo-credentials {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.demo-credentials h4 {
+  color: #11486B;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.demo-credentials p {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.demo-credentials strong {
+  color: #11486B;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-background {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 520px;
+    width: 100%;
+  }
+  
+  .university-logo {
+    max-width: 100%;
+  }
+  
+  .logo-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .logo-placeholder h2 {
+    font-size: 28px;
+  }
+  
+  .login-card {
+    padding: 30px 20px;
+    margin: 0 10px;
+    width: 100%;
+  }
+  
+  .login-header h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+  
+  .login-card {
+    padding: 25px 15px;
+  }
+  
+  .login-header h1 {
+    font-size: 22px;
+  }
+  
+  .form-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+img
+{
+   
+    width: 90px;
+    border: #ccc;
+
+    margin-left:100px;
+    margin-right:100px;
+    margin-top:auto;
+    margin-bottom:auto;
+   
+   
+}

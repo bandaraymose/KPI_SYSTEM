@@ -1,0 +1,348 @@
+/* Main container styles */
+.user-list-container {
+  padding: 30px;
+  min-height: calc(100vh - 70px);
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header styles */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-title {
+  color: #11486B;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Responsive 3-column grid for user cards */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.user-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  border: 1px solid rgba(17, 72, 107, 0.1);
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(17, 72, 107, 0.15);
+
+/* Bootstrap card override for user card */
+.user-card {
+  /* Use Bootstrap card styles, but add spacing and shadow for consistency */
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(17, 72, 107, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(17, 72, 107, 0.15);
+}
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #11486B;
+  font-weight: 600;
+}
+
+.user-info p {
+  margin: 4px 0 0 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.user-body {
+  margin: 16px 0;
+  flex-grow: 1;
+}
+
+.role-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.role-chip {
+  background: #e3f0fa;
+  color: #11486B;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(17, 72, 107, 0.1);
+}
+
+/* Use Bootstrap's card-footer for actions */
+.user-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.user-actions .btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-primary { 
+  background: #11486B; 
+  color: white; 
+}
+
+.btn-primary:hover {
+  background: #0d3a58;
+  box-shadow: 0 2px 8px rgba(17, 72, 107, 0.3);
+}
+
+.btn-outline { 
+  background: transparent; 
+  border: 1px solid #11486B; 
+  color: #11486B; 
+}
+
+.btn-outline:hover {
+  background: #11486B;
+  color: white;
+}
+
+.btn-secondary { 
+  background: #6c757d; 
+  color: white; 
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.btn-danger { 
+  background: #d9534f; 
+  color: white; 
+}
+
+.btn-danger:hover {
+  background: #c9302c;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 20px;
+  gap: 8px;
+}
+
+/* Use Bootstrap's .btn classes for all user card actions */
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.kpi-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid #11486B;
+}
+
+.kpi-card h3 {
+  color: #11486B;
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #11486B;
+  margin: 8px 0;
+}
+
+.kpi-target {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Departments Page */
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.department-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  transition: transform 0.2s ease;
+  border: 1px solid rgba(17, 72, 107, 0.1);
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(17, 72, 107, 0.15);
+}
+
+.department-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.department-icon {
+  width: 48px;
+  height: 48px;
+  background: #e3f0fa;
+  color: #11486B;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 16px;
+}
+
+.department-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #11486B;
+}
+
+.department-info p {
+  margin: 4px 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.department-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #11486B;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.department-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .users-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .user-list-container {
+    padding: 20px;
+  }
+  
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .departments-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-card {
+    padding: 20px;
+  }
+  
+  .user-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .user-avatar {
+    margin-bottom: 12px;
+  }
+  
+  .user-actions {
+    flex-direction: column;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+  }
+  
+
+  .kpi-container {
+    padding: 16px;
+  }
+}

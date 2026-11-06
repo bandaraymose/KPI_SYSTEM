@@ -1,0 +1,119 @@
+/* Container & Header */
+.user-list-container {
+  padding: 30px;
+  min-height: calc(100vh - 70px);
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-header h1 {
+  color: #11486B;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+.page-header p {
+  color: #666;
+  margin: 4px 0 0 0;
+}
+
+/* Filters */
+.filters-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filters-section input,
+.filters-section select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Users Grid */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* User Card */
+.user-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(17, 72, 107, 0.12);
+}
+.user-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(17, 72, 107, 0.2);
+}
+.user-info { margin-bottom: 16px; }
+.user-info h3 { margin:0; color:#11486B; font-weight:600; font-size:1.2rem; }
+.user-info p { margin:6px 0; color:#666; font-size:0.95rem; }
+.role-list { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+.role-chip { background:#e3f0fa; color:#11486B; border-radius:16px; padding:6px 12px; font-size:0.85rem; font-weight:500; border:1px solid rgba(17,72,107,0.1); }
+
+/* Actions */
+.user-actions { display:flex; justify-content:flex-end; gap:12px; margin-top:16px; padding-top:12px; border-top:1px solid #f0f0f0; }
+.btn { padding:8px 16px; font-size:0.9rem; border-radius:6px; cursor:pointer; transition:all 0.2s ease; font-weight:500; border:none; }
+.btn-primary { background:#11486B; color:white; }
+.btn-primary:hover { background:#0d3a58; box-shadow:0 2px 8px rgba(17,72,107,0.3); }
+.btn-outline { background:transparent; border:1px solid #11486B; color:#11486B; }
+.btn-outline:hover { background:#11486B; color:white; }
+.btn-secondary { background:#6c757d; color:white; }
+.btn-secondary:hover { background:#5a6268; }
+.btn-danger { background:#d9534f; color:white; }
+.btn-danger:hover { background:#c9302c; }
+
+/* Pagination */
+.pagination { display:flex; justify-content:center; align-items:center; margin:40px 0 20px; gap:8px; }
+.page-btn { padding:6px 12px; border-radius:6px; border:1px solid #ccc; cursor:pointer; }
+.page-btn.active { background:#11486B; color:white; border-color:#11486B; }
+
+/* Modal */
+.modal-overlay {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content:center; align-items:center;
+  z-index:1000; padding:10px;
+}
+.modal {
+  background: #fff;
+  border-radius:12px;
+  width:100%;
+  max-width:500px;
+  max-height:90vh;
+  overflow-y:auto;
+  padding:20px 24px;
+  position:relative;
+}
+.modal-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+.modal-header h3 { margin:0; }
+.modal-close { background:none; border:none; font-size:1.5rem; cursor:pointer; }
+.modal-form .form-group { margin-bottom:16px; display:flex; flex-direction:column; }
+.modal-form .form-group label { margin-bottom:6px; font-weight:500; }
+.modal-form .form-group input, .modal-form .form-group select { padding:8px 10px; border-radius:6px; border:1px solid #ccc; font-size:0.95rem; }
+.roles-checkboxes { display:flex; flex-wrap:wrap; gap:8px; }
+.roles-checkboxes label { display:flex; align-items:center; gap:4px; font-weight:500; }
+.roles-checkboxes label.fixed { color:#555; }
+.roles-checkboxes input.fixed { cursor:not-allowed; }
+.modal-actions { display:flex; justify-content:flex-end; gap:12px; margin-top:20px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .users-grid { grid-template-columns:1fr; }
+  .filters-section { flex-direction:column; align-items:flex-start; gap:10px; }
+  .user-list-container { padding:20px; }
+}

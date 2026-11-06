@@ -1,0 +1,773 @@
+/* WorkplanAssignment Component Styles */
+.workplan-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 80px);
+}
+
+.page-header {
+  background: linear-gradient(135deg, #11486B, #1a5f8a);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.page-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #11486B;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #11486B;
+  color: #fff;
+}
+
+.tab-btn.active {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(17, 72, 107, 0.3);
+}
+.tab-btn.active:hover {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(17, 72, 107 , 0.3);
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 25px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+  color: #11486B;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-header p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+  padding: 0 25px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #11486B;
+  font-size: 0.95rem;
+}
+
+.form-select, .form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #11486B;
+  box-shadow: 0 0 0 3px rgba(17, 72, 107, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Workplan Preview */
+.workplan-preview {
+  background-color: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 15px 25px;
+}
+
+.preview-content h4 {
+  margin: 0 0 8px 0;
+  color: #11486B;
+}
+
+.preview-content p {
+  margin: 0;
+  color: #6c757d;
+}
+
+/* Subordinates List */
+.subordinates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+.subordinate-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.subordinate-item:hover {
+  border-color: #11486B;
+  box-shadow: 0 2px 8px rgba(17, 72, 107, 0.1);
+}
+
+.subordinate-item input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.subordinate-item span {
+  font-weight: 500;
+}
+
+.subordinate-item .department {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-left: 8px;
+}
+
+/* Form Actions */
+.form-actions {
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-primary {
+  background-color: #11486B;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0f3d5c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(17, 72, 107, 0.3);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #11486B;
+  border: 2px solid #11486B;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: #11486B;
+  color: white;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* No Data States */
+.no-data {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+.no-data-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.no-data h3 {
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.no-data p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Assignment Items */
+.assignments-list {
+  padding: 25px;
+}
+
+.assignment-item {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.assignment-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.assignment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.assignment-info h3 {
+  margin: 0 0 8px 0;
+  color: #11486B;
+  font-size: 1.2rem;
+}
+
+.assignment-info p {
+  margin: 4px 0;
+  color: #6c757d;
+}
+
+.assignment-info small {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.assignment-status {
+  text-align: right;
+}
+
+.assignment-notes, .completion-notes {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+  border-left: 4px solid #11486B;
+}
+
+.assignment-notes strong, .completion-notes strong {
+  color: #11486B;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.assignment-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Workplan Cards */
+.assigned-workplans-list {
+  padding: 25px;
+}
+
+.workplan-card {
+  border: 1px solid #a7a2a2;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.workplan-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+.workplan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.workplan-info h3 {
+  margin: 0 0 8px 0;
+  color: #11486B;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.workplan-period {
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.workplan-info p {
+  margin: 4px 0;
+  color: #6c757d;
+}
+
+.workplan-info small {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.workplan-status {
+  text-align: right;
+}
+
+.progress-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-text {
+  font-weight: 600;
+  color: #11486B;
+  font-size: 0.9rem;
+  min-width: 35px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 200px;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #28a745, #20c997);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* Workplan Details */
+.workplan-details {
+  margin: 20px 0;
+}
+
+.workplan-description {
+  font-style: italic;
+  color: #6c757d;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #11486B;
+}
+
+.workplan-activities {
+  display: grid;
+  gap: 15px;
+}
+
+.activity-section {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 2px solid #e9ecef;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.activity-section h4 {
+  margin: 0 0 10px 0;
+  color: #11486B;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.activity-section p {
+  margin: 0;
+  color: #495057;
+  line-height: 1.5;
+}
+
+.assignment-notes h4, .review-feedback h4 {
+  color: #11486B;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.assignment-notes, .review-feedback {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #11486B;
+}
+
+.assignment-notes {
+  background-color: #e3f2fd;
+  border-left-color: #2196f3;
+}
+
+.review-feedback {
+  background-color: #e8f5e8;
+  border-left-color: #4caf50;
+}
+
+.workplan-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+}
+
+.status-text {
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.status-text.completed {
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* Badge Styles */
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.badge-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* KPIs Section */
+.kpis-section {
+  padding: 0;
+}
+
+.kpis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  gap: 20px;
+  padding: 25px;
+}
+
+.kpi-card {
+  background: white;
+  border: 1px solid #a7a2a2;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.kpi-title {
+  margin: 0;
+  color: #11486B;
+  font-size: 1.1rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.category-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-description {
+  color: #6c757d;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.kpi-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.metric {
+  text-align: center;
+  flex: 1;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.metric-value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #11486B;
+}
+
+.kpi-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* Self-Evaluation Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  width: min(720px, 96vw);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 { margin: 0; color: #11486B; }
+.close-btn { background: transparent; border: none; font-size: 20px; cursor: pointer; }
+
+.modal-body { padding: 16px 20px; }
+.modal-footer { padding: 12px 20px; border-top: 1px solid #e5e7eb; display: flex; gap: 10px; justify-content: flex-end; }
+
+.kpi-radio-list { display: grid; gap: 12px; margin-top: 12px; }
+.kpi-radio-item { padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px; }
+.kpi-radio-item .kpi-title { font-weight: 600; margin-bottom: 8px; color: #11486B; }
+.radio-group { display: flex; gap: 10px; }
+.radio-option { display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 6px; cursor: pointer; }
+.radio-option input { cursor: pointer; }
+
+.alert { padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
+.alert.success { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+.alert.error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .workplan-container {
+    padding: 10px;
+  }
+  
+  .page-header {
+    padding: 20px;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .tab-navigation {
+    flex-direction: column;
+  }
+  
+  .assignment-header, .workplan-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .assignment-status, .workplan-status {
+    text-align: left;
+  }
+  
+  .progress-container {
+    justify-content: flex-start;
+  }
+  
+  .form-actions, .assignment-actions, .workplan-actions {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .subordinates-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpis-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .progress-bar {
+    width: 150px;
+  }
+}

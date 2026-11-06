@@ -1,0 +1,8 @@
+**/node_modules/
+**/bin/
+**/obj/
+frontend/build/
+backend/KpiApi/appsettings.json
+backend/KpiApi/appsettings.Development.json
+.env
+.env.*
